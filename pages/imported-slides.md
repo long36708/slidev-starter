@@ -1,13 +1,13 @@
-# Imported Slides
+# 导入的幻灯片
 
-You can split your slides.md into multiple files and organize them as you want using the `src` attribute.
+你可以拆分幻灯片。使用 `src` 属性将它们组织成多个文件。
 
 #### `slides.md`
 
 ```markdown
 # Page 1
 
-Page 2 from main entry.
+从主条目开始的第二页。
 
 ---
 
@@ -21,7 +21,7 @@ Page 2 from main entry.
 ```markdown
 # Page 2
 
-Page 2 from another file.
+另一个文件的第二页。
 ```
 
-[Learn more](https://sli.dev/guide/syntax.html#importing-slides)
+[了解更多](https://sli.dev/guide/syntax.html#importing-slides)

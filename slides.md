@@ -43,31 +43,33 @@ mdc: true
 </div>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+每张幻灯片的最后一个注释块将被视为幻灯片注释。
+它将在演示者模式下与幻灯片一起显示和编辑。
+[在文档中阅读更多内容](https://sli.dev/guide/syntax.html#notes)
 -->
 
 ---
 transition: fade-out
 ---
 
-# What is Slidev?
+# 什么是Slidev？
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Slidev是一个为开发人员设计的幻灯片制作和演示器，包括以下功能
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
+- 📝 **Text-based** - 将重点放在Markdown的内容上，然后再对它们进行样式化
+- 🎨 **Themable** - 主题可以作为NPM包共享和重用
+- 🧑‍💻 **Developer Friendly** - 代码高亮显示，实时编码与自动完成
+- 🤹 **Interactive** - 嵌入Vue组件来增强表达式
+- 🎥 **Recording** - 内置录音和相机视图
+- 📤 **Portable** - 导出到PDF， PPTX, png，甚至是可托管的SPA
+- 🛠 **Hackable** - 在Slidev中几乎可以实现网页上的任何功能
 <br>
 <br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+阅读更多关于 [Why Slidev?](https://sli.dev/guide/why)
 
 <!--
-You can have `style` tag in markdown to override the style for the current page.
+您可以在markdown中使用 `style` 标签来覆盖当前页面的样式。
 Learn more: https://sli.dev/features/slide-scope-style
 -->
 
@@ -84,7 +86,7 @@ h1 {
 </style>
 
 <!--
-Here is another comment.
+这是另一个评论.
 -->
 
 ---
@@ -92,18 +94,18 @@ transition: slide-up
 level: 2
 ---
 
-# Navigation
+# 导航
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
+将鼠标悬停在左下角以查看导航的控制面板, [了解更多](https://sli.dev/guide/ui#navigation-bar)
 
-## Keyboard Shortcuts
+## 键盘快捷键
 
 |                                                     |                             |
 | --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
+| <kbd>right</kbd> / <kbd>space</kbd>                 | 下一个动画或幻灯片     |
+| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | 之前的动画或幻灯片 |
+| <kbd>up</kbd>                                       | 之前的幻灯片              |
+| <kbd>down</kbd>                                     | 下一张                  |
 
 <!-- https://sli.dev/guide/animations.html#click-animation -->
 <img
@@ -119,15 +121,15 @@ layout: two-cols
 layoutClass: gap-16
 ---
 
-# Table of contents
+# 目录表
 
-You can use the `Toc` component to generate a table of contents for your slides:
+您可以使用`Toc`组件为幻灯片生成内容表:
 
 ```html
 <Toc minDepth="1" maxDepth="1" />
 ```
 
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
+标题将从你的幻灯片内容推断出来，或者你可以在你的首页用 `title` 和`level`覆盖它。
 
 ::right::
 
@@ -138,9 +140,9 @@ layout: image-right
 image: https://cover.sli.dev
 ---
 
-# Code
+# 代码
 
-Use code snippets and get the highlighting directly, and even types hover!
+使用代码片段并直接获得高亮显示，甚至类型悬停！
 
 ```ts {all|5|7|7-8|10|all} twoslash
 // TwoSlash enables TypeScript hover information
@@ -157,7 +159,7 @@ doubled.value = 2
 
 <arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
 
-<!-- This allow you to embed external code blocks -->
+<!-- 这允许您嵌入外部代码块 -->
 <<< @/snippets/external.ts#snippet
 
 <!-- Footer -->
@@ -178,13 +180,13 @@ doubled.value = 2
 </style>
 
 <!--
-Notes can also sync with clicks
+笔记也可以与点击同步
 
-[click] This will be highlighted after the first click
+[click] 这将在第一次点击后突出显示
 
-[click] Highlighted with `count = ref(0)`
+[click] 用 `count = ref(0)` 突出显示
 
-[click:3] Last click (skip two clicks)
+[click:3] 最后一次点击（跳过两次点击）
 -->
 
 ---
@@ -193,9 +195,11 @@ level: 2
 
 # Shiki Magic Move
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev支持跨多个代码段的动画。
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
+添加多个代码块并使用`<code>````md magic-move</code>`（四个反引号）包装它们以启用魔术移动。
+
+For example:
 
 ````md magic-move {lines: true}
 ```ts {*|2|*}
@@ -244,7 +248,7 @@ export default {
 }
 ```
 
-Non-code blocks are ignored.
+非代码块被忽略。
 
 ```vue
 <!-- step 4 -->
@@ -263,14 +267,16 @@ const author = {
 
 ---
 
-# Components
+# 组件
 
 <div grid="~ cols-2 gap-4">
 <div>
 
-You can use Vue components directly inside your slides.
+您可以直接在幻灯片中使用Vue组件。
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+我们提供了一些内置组件，如 `<Tweet/>` 和 `<Youtube/>` ，您可以直接使用。
+
+添加自定义组件也非常容易。
 
 ```html
 <Counter :count="10" />
@@ -294,9 +300,9 @@ Check out [the guides](https://sli.dev/builtin/components.html) for more.
 </div>
 
 <!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
+主持人 使用 **bold**, *italic*, and ~~striked~~ 文字做备注.
 
-Also, HTML elements are valid:
+此外，HTML元素也是有效的:
 <div class="flex w-full">
   <span style="flex-grow: 1;">Left content</span>
   <span>Right content</span>
@@ -307,9 +313,11 @@ Also, HTML elements are valid:
 class: px-20
 ---
 
-# Themes
+# 主题
 
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
+Slidev具有强大的主题支持。 主题可以为工具提供样式、布局、组件甚至配置。
+
+在主题之间切换只需在你的frontmatter**一个编辑**：
 
 <div grid="~ cols-2 gap-2" m="t-2">
 
@@ -331,21 +339,21 @@ theme: seriph
 
 </div>
 
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
+阅读更多关于 [How to use a theme](https://sli.dev/guide/theme-addon#use-theme)
+请查看 [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
 
 ---
 
-# Clicks Animations
+# 点击动画
 
-You can add `v-click` to elements to add a click animation.
+你可以给元素添加 `v-click` 来添加点击动画。
 
 <div v-click>
 
-This shows up when you click the slide:
+当你点击幻灯片时就会显示：
 
 ```html
-<div v-click>This shows up when you click the slide.</div>
+<div v-click>当你点击幻灯片时就会显示出来.</div>
 ```
 
 </div>
@@ -354,10 +362,10 @@ This shows up when you click the slide:
 
 <v-click>
 
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
+ <span v-mark.red="3"><code>v-mark</code> 指令</span>
+还允许您添加
+<span v-mark.circle.orange="4">内联标记</span>
+, 由 [Rough Notation](https://roughnotation.com/) 提供支持:
 
 ```html
 <span v-mark.underline.orange>inline markers</span>
@@ -367,7 +375,7 @@ also allows you to add
 
 <div mt-20 v-click>
 
-[Learn more](https://sli.dev/guide/animations#click-animation)
+[了解更多](https://sli.dev/guide/animations#click-animation)
 
 </div>
 
@@ -375,7 +383,7 @@ also allows you to add
 
 # Motions
 
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
+动态动画是由 [@vueuse/motion](https://motion.vueuse.org/), 由 `v-motion` 指令触发.
 
 ```html
 <div
@@ -426,7 +434,7 @@ Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), t
   </div>
 </div>
 
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
+<!-- Vue 的 `setup` 脚本可以直接在markdown中使用，并且只会影响当前页面 -->
 <script setup lang="ts">
 const final = {
   x: 0,
@@ -447,7 +455,7 @@ const final = {
   :initial="{ x:35, y: 30, opacity: 0}"
   :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
 
-[Learn more](https://sli.dev/guide/animations.html#motion)
+[了解更多](https://sli.dev/guide/animations.html#motion)
 
 </div>
 
@@ -455,13 +463,13 @@ const final = {
 
 # LaTeX
 
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
+LaTeX是开箱即用的. Powered by [KaTeX](https://katex.org/).
 
 <div h-3 />
 
-Inline $\sqrt{3x-1}+(1+x)^2$
+内联 $\sqrt{3x-1}+(1+x)^2$
 
-Block
+块
 $$ {1|3|all}
 \begin{aligned}
 \nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
@@ -471,13 +479,13 @@ $$ {1|3|all}
 \end{aligned}
 $$
 
-[Learn more](https://sli.dev/features/latex)
+[了解更多](https://sli.dev/features/latex)
 
 ---
 
-# Diagrams
+# 图
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+您可以直接在Markdown中从文本描述创建图表/图形。
 
 <div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
 
@@ -549,21 +557,21 @@ database "MySql" {
 
 </div>
 
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
+了解更多: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
 
 ---
 foo: bar
 dragPos:
-  square: 691,32,167,_,-16
+  square: 710,22,167,_,-16
 ---
 
-# Draggable Elements
+# 可拖动的元素
 
-Double-click on the draggable elements to edit their positions.
+双击可拖动元素来编辑它们的位置。
 
 <br>
 
-###### Directive Usage
+###### 指令的使用
 
 ```md
 <img v-drag="'square'" src="https://sli.dev/logo.png">
@@ -571,30 +579,30 @@ Double-click on the draggable elements to edit their positions.
 
 <br>
 
-###### Component Usage
+###### 组件的使用
 
 ```md
 <v-drag text-3xl>
   <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
+  使用 `v-drag` 组件来创建一个可拖动的容器！
 </v-drag>
 ```
 
-<v-drag pos="663,206,261,_,-15">
+<v-drag pos="650,239,261,_,-15">
   <div text-center text-3xl border border-main rounded>
-    Double-click me!
+    双击我!
   </div>
 </v-drag>
 
 <img v-drag="'square'" src="https://sli.dev/logo.png">
 
-###### Draggable Arrow
+###### 可拖放箭头
 
 ```md
 <v-drag-arrow two-way />
 ```
 
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
+<v-drag-arrow pos="283,472,157,36" two-way op70 />
 
 ---
 src: ./pages/imported-slides.md
@@ -605,9 +613,9 @@ hide: false
 
 # Monaco Editor
 
-Slidev provides built-in Monaco Editor support.
+Slidev提供内置的Monaco编辑器支持.
 
-Add `{monaco}` to the code block to turn it into an editor:
+将`{monaco}`添加到代码块中以将其转换为编辑器:
 
 ```ts {monaco}
 import { ref } from 'vue'
@@ -616,7 +624,7 @@ import { emptyArray } from './external'
 const arr = ref(emptyArray(10))
 ```
 
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
+使用`{monaco-run}`创建可以直接在幻灯片中执行代码的编辑器:
 
 ```ts {monaco-run}
 import { version } from 'vue'
@@ -632,7 +640,7 @@ layout: center
 class: text-center
 ---
 
-# Learn More
+# 了解更多
 
 [Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
 
