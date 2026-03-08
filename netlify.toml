@@ -1,6 +1,6 @@
 [build]
 publish = "dist"
-command = "npm run build"
+command = "node --max-old-space-size=4096 ./node_modules/.bin/slidev build"
 
 [build.environment]
 NODE_VERSION = "24"
